@@ -2,7 +2,8 @@
 /dist
 /node_modules
 /build
-
+**/node_modules
+**/dist
 # Logs
 logs
 *.log
@@ -55,3 +56,5 @@ pids
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 .env
+
+**/*.venv

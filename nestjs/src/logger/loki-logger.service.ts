@@ -27,8 +27,8 @@ export class LokiLogger extends Logger implements LoggerService {
    */
   log(
     message: any,
-    orgId: string = 'unknown',
-    botId: string = 'unknown',
+    orgId: string = 'abc',
+    botId: string = 'efg',
     context?: string,
   ) {
     super.log(message, orgId, botId);
@@ -142,7 +142,7 @@ export class LokiLogger extends Logger implements LoggerService {
         },
       ],
     };
-    const LokiURL = this.configService.get<string>('GRAFANA_URL');
+    const LokiURL = this.configService.get<string>('LOKI_INTERNAL_BASE_URL');
     try {
       await firstValueFrom(
         this.httpService
